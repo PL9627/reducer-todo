@@ -1,15 +1,10 @@
-import React, {useState, useReducer} from 'react';
-import {initialState, todoReducer} from '../reducers/todoReducer';
+import React from 'react';
 
-const Todo = () => {
-    const [newTodo, setNewTodo] = useState("");
-    const [state, dispatch] = useReducer(todoReducer, initialState);
-
+export const Todo = props => {
     return(
-        <div>
-            <div>
-
-            </div>
+        <div className={`item${props.item.completed ? "completed" : ""}`}
+        onClick={() => {props.toggleToDoItem()}}>
+            <p>{props.item.todo}</p>
         </div>
     )
 }
