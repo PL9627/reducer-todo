@@ -22,6 +22,7 @@ export const TodoForm = () => {
             name="name"
             value={state.name}
             onChange={handleChanges}/>
+            <button>Add Todo</button>
         </form>
     )
 }
