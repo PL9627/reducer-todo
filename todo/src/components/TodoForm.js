@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export const TodoForm = () => {
+const TodoForm = ({state, dispatch}) => {
     const [newTodo, setNewTodo] = useState("");
 
     const handleChanges = e => {
@@ -26,3 +26,5 @@ export const TodoForm = () => {
         </form>
     )
 }
+
+export default TodoForm;
