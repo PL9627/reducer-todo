@@ -15,6 +15,13 @@ export const todoReducer = (state, action) => {
 
             return {
                 ...state, todo: [...state.todo, newTodo]
+            };
+
+        case "TOGGLE_TODO":
+            return {
+                ...state, todo: state.todo.map(item => {
+                    {item.id === action.payload ? !item.completed : item}
+                })
             }
 
         default:
