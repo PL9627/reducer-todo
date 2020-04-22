@@ -5,5 +5,13 @@ export const TodoForm = () => {
 
     const handleChanges = e => {
         setNewTodo(e.target.value);
+    };
+
+    const submitItem = e => {
+        e.preventDefault();
+
+        setNewTodo('');
+
+        dispatch
     }
 }
