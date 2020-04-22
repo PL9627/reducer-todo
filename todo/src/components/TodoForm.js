@@ -12,6 +12,8 @@ export const TodoForm = () => {
 
         setNewTodo('');
 
-        dispatch
-    }
+        dispatch({type: "ADD_ITEM", payload: newTodo});
+    };
+
+    
 }
