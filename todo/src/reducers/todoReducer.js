@@ -8,7 +8,7 @@ export const todoReducer = (state, action) => {
     switch(action.type) {
         case "ADD_TODO":
             const newTodo = {
-                todo: "",
+                todo: action.payload,
                 completed: false,
                 id: Date.now()
             }

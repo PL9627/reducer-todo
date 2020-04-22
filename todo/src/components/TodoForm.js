@@ -15,5 +15,13 @@ export const TodoForm = () => {
         dispatch({type: "ADD_ITEM", payload: newTodo});
     };
 
-    
+    return(
+        <form onSubmit={submitItem}>
+            <input 
+            type="text"
+            name="name"
+            value={state.name}
+            onChange={handleChanges}/>
+        </form>
+    )
 }
