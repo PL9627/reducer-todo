@@ -1,4 +1,18 @@
 import React, { useState } from "react";
+import styled from 'styled-components';
+
+const AddBtn = styled.button`
+    margin: 0 2%;
+    background: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: red;
+
+    &:hover {
+        color: white;
+        background-color: red;
+    }
+`;
 
 const TodoForm = ({ state, dispatch }) => {
   const [newTodo, setNewTodo] = useState("");
@@ -23,7 +37,7 @@ const TodoForm = ({ state, dispatch }) => {
         value={state.title}
         onChange={handleChanges}
       />
-      <button>Add Todo</button>
+      <AddBtn>Add Todo</AddBtn>
     </form>
   );
 };
